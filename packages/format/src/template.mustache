@@ -1,0 +1,37 @@
+{{!-- Mustache template to process list of violations from axe
+      Model: com.salesforce.sa11y.AxeResult
+
+      Ref:
+        - http://mustache.github.io/mustache.5.html
+        - https://github.com/samskivert/jmustache
+        - [Special variables](https://github.com/samskivert/jmustache#special-variables)
+          used in this template
+            * "-index" : special variable containing index of iteration starting from 1
+--}}
+{{numElements}} HTML elements have accessibility issue(s). {{results.size}} rules failed.
+Page URL       :  {{{pageURL}}}
+Test mode      :  {{testMode}}
+
+{{#results}}
+    ({{-index}}) [{{ruleName}}]
+        * Description      : {{{ruleDescription}}}.
+        * More info        : {{{helpURL}}}
+        {{#wcagCriteria}}
+        * WCAG criteria    : {{wcagCriteria}}
+        {{/wcagCriteria}}
+        * Error element(s) : {{elements.size}}
+        {{#elements}}
+            ({{-index}}) HTML element : {{{html}}}
+              - CSS selector(s)    :  {{{target}}}
+            {{#additionalInfo}}
+              - Additional info    : {{{additionalInfo}}}
+            {{/additionalInfo}}
+            {{#relatedElements}}
+              - Related element(s) :
+                {{#relatedElements}}
+                * HTML             : {{{html}}}
+                  CSS selector(s)  : {{{target}}}
+                {{/relatedElements}}
+            {{/relatedElements}}
+        {{/elements}}
+{{/results}}
