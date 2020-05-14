@@ -31,7 +31,7 @@
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
         "ci:build": "yarn install --frozen-lockfile && yarn build",
         "ci:test": "yarn lint:all && yarn test",
-        "clean:install": "lerna clean"
+        "clean:install": "lerna clean --yes && yarn install"
     },
     "config": {
         "commitizen": {
@@ -64,7 +64,6 @@
         "@commitlint/cli": "^8.3.5",
         "@commitlint/config-conventional": "^8.3.4",
         "@types/jest": "^25.2.2",
-        "@types/jsdom": "^16.2.1",
         "@types/node": "^12.12.31",
         "@typescript-eslint/eslint-plugin": "^2.33.0",
         "@typescript-eslint/parser": "^2.33.0",

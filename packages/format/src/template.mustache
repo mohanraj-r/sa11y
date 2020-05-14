@@ -10,28 +10,29 @@
 --}}
 {{numElements}} HTML elements have accessibility issue(s). {{results.size}} rules failed.
 Page URL       :  {{{pageURL}}}
-Test mode      :  {{testMode}}
 
 {{#results}}
-    ({{-index}}) [{{ruleName}}]
-        * Description      : {{{ruleDescription}}}.
-        * More info        : {{{helpURL}}}
-        {{#wcagCriteria}}
-        * WCAG criteria    : {{wcagCriteria}}
-        {{/wcagCriteria}}
-        * Error element(s) : {{elements.size}}
-        {{#elements}}
-            ({{-index}}) HTML element : {{{html}}}
-              - CSS selector(s)    :  {{{target}}}
-            {{#additionalInfo}}
-              - Additional info    : {{{additionalInfo}}}
-            {{/additionalInfo}}
+    ({{-index}}) [{{ruleName}}] {{{helpText}}}
+    * Description      : {{{ruleDescription}}}
+    * Help URL         : {{{helpURL}}}
+    * More info        : {{presetRules}} ruleset{{#wcagCriteria}}, {{wcagCriteria}}{{/wcagCriteria}}
+    * Error element(s) : {{elements.size}}
+    {{#elements}}
+        ({{-index}}) HTML element : {{{html}}}
+        - CSS selector(s)    :  {{{target}}}
+        {{#additionalInfo}}
+            - Additional info    : {{{additionalInfo}}}
+        {{/additionalInfo}}
+        {{#relatedElements}}
+            - Related element(s) :
             {{#relatedElements}}
-              - Related element(s) :
-                {{#relatedElements}}
                 * HTML             : {{{html}}}
-                  CSS selector(s)  : {{{target}}}
-                {{/relatedElements}}
+                CSS selector(s)  : {{{target}}}
             {{/relatedElements}}
-        {{/elements}}
+        {{/relatedElements}}
+    {{/elements}}
 {{/results}}
+
+For more info about automated accessibility testing: https://sfdc.co/a11y-test
+For tips on fixing accessibility bugs: https://sfdc.co/a11y
+Questions? Post on Accessibility Team Chatter: https://sfdc.co/a11y-gus

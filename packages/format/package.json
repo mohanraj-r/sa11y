@@ -23,8 +23,10 @@
         "dist/**/*.js"
     ],
     "devDependencies": {
-        "axe-core": "^3.5.3",
-        "jsdom": "^16.2.2",
-        "@sa11y/test-utils": "0.1.0"
+        "@sa11y/test-utils": "0.1.0",
+        "axe-core": "^3.5.3"
+    },
+    "dependencies": {
+        "handlebars": "4.7.6"
     }
 }
