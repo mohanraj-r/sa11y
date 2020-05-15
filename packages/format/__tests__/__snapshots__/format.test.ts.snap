@@ -16,3 +16,121 @@ Links must have discernible text (link-name): a
 Page must contain a level-one heading (page-has-heading-one): html
   - More info: https://dequeuniversity.com/rules/axe/3.5/page-has-heading-one?application=axeAPI"
 `;
+
+exports[`a11y Results Formatter should load compiled template 1`] = `
+"{\\"1\\":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, options, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=\\"function\\", alias4=container.escapeExpression, alias5=container.hooks.blockHelperMissing, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    }, buffer = 
+  \\"    (\\"
+    + alias4(((helper = (helper = lookupProperty(helpers,\\"-index\\") || (depth0 != null ? lookupProperty(depth0,\\"-index\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"-index\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":15,\\"column\\":5},\\"end\\":{\\"line\\":15,\\"column\\":15}}}) : helper)))
+    + \\") [\\"
+    + alias4(((helper = (helper = lookupProperty(helpers,\\"ruleName\\") || (depth0 != null ? lookupProperty(depth0,\\"ruleName\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"ruleName\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":15,\\"column\\":18},\\"end\\":{\\"line\\":15,\\"column\\":30}}}) : helper)))
+    + \\"] \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"helpText\\") || (depth0 != null ? lookupProperty(depth0,\\"helpText\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"helpText\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":15,\\"column\\":32},\\"end\\":{\\"line\\":15,\\"column\\":46}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n    * Description      : \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"ruleDescription\\") || (depth0 != null ? lookupProperty(depth0,\\"ruleDescription\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"ruleDescription\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":16,\\"column\\":25},\\"end\\":{\\"line\\":16,\\"column\\":46}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n    * Help URL         : \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"helpURL\\") || (depth0 != null ? lookupProperty(depth0,\\"helpURL\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"helpURL\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":17,\\"column\\":25},\\"end\\":{\\"line\\":17,\\"column\\":38}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n    * More info        : \\"
+    + alias4(((helper = (helper = lookupProperty(helpers,\\"presetRules\\") || (depth0 != null ? lookupProperty(depth0,\\"presetRules\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"presetRules\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":18,\\"column\\":25},\\"end\\":{\\"line\\":18,\\"column\\":40}}}) : helper)))
+    + \\" ruleset\\";
+  stack1 = ((helper = (helper = lookupProperty(helpers,\\"wcagCriteria\\") || (depth0 != null ? lookupProperty(depth0,\\"wcagCriteria\\") : depth0)) != null ? helper : alias2),(options={\\"name\\":\\"wcagCriteria\\",\\"hash\\":{},\\"fn\\":container.program(2, data, 0),\\"inverse\\":container.noop,\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":18,\\"column\\":48},\\"end\\":{\\"line\\":18,\\"column\\":100}}}),(typeof helper === alias3 ? helper.call(alias1,options) : helper));
+  if (!lookupProperty(helpers,\\"wcagCriteria\\")) { stack1 = alias5.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  buffer += \\"\\\\n    * Error element(s) : \\"
+    + alias4(container.lambda(((stack1 = (depth0 != null ? lookupProperty(depth0,\\"elements\\") : depth0)) != null ? lookupProperty(stack1,\\"size\\") : stack1), depth0))
+    + \\"\\\\n\\";
+  stack1 = ((helper = (helper = lookupProperty(helpers,\\"elements\\") || (depth0 != null ? lookupProperty(depth0,\\"elements\\") : depth0)) != null ? helper : alias2),(options={\\"name\\":\\"elements\\",\\"hash\\":{},\\"fn\\":container.program(4, data, 0),\\"inverse\\":container.noop,\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":20,\\"column\\":4},\\"end\\":{\\"line\\":33,\\"column\\":17}}}),(typeof helper === alias3 ? helper.call(alias1,options) : helper));
+  if (!lookupProperty(helpers,\\"elements\\")) { stack1 = alias5.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
+},\\"2\\":function(container,depth0,helpers,partials,data) {
+    var helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    };
+
+  return \\", \\"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,\\"wcagCriteria\\") || (depth0 != null ? lookupProperty(depth0,\\"wcagCriteria\\") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === \\"function\\" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{\\"name\\":\\"wcagCriteria\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":18,\\"column\\":67},\\"end\\":{\\"line\\":18,\\"column\\":83}}}) : helper)));
+},\\"4\\":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, options, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=\\"function\\", alias4=container.hooks.blockHelperMissing, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    }, buffer = 
+  \\"        (\\"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,\\"-index\\") || (depth0 != null ? lookupProperty(depth0,\\"-index\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"-index\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":21,\\"column\\":9},\\"end\\":{\\"line\\":21,\\"column\\":19}}}) : helper)))
+    + \\") HTML element : \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"html\\") || (depth0 != null ? lookupProperty(depth0,\\"html\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"html\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":21,\\"column\\":36},\\"end\\":{\\"line\\":21,\\"column\\":46}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n        - CSS selector(s)    :  \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"target\\") || (depth0 != null ? lookupProperty(depth0,\\"target\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"target\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":22,\\"column\\":32},\\"end\\":{\\"line\\":22,\\"column\\":44}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n\\";
+  stack1 = ((helper = (helper = lookupProperty(helpers,\\"additionalInfo\\") || (depth0 != null ? lookupProperty(depth0,\\"additionalInfo\\") : depth0)) != null ? helper : alias2),(options={\\"name\\":\\"additionalInfo\\",\\"hash\\":{},\\"fn\\":container.program(5, data, 0),\\"inverse\\":container.noop,\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":23,\\"column\\":8},\\"end\\":{\\"line\\":25,\\"column\\":27}}}),(typeof helper === alias3 ? helper.call(alias1,options) : helper));
+  if (!lookupProperty(helpers,\\"additionalInfo\\")) { stack1 = alias4.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  stack1 = ((helper = (helper = lookupProperty(helpers,\\"relatedElements\\") || (depth0 != null ? lookupProperty(depth0,\\"relatedElements\\") : depth0)) != null ? helper : alias2),(options={\\"name\\":\\"relatedElements\\",\\"hash\\":{},\\"fn\\":container.program(7, data, 0),\\"inverse\\":container.noop,\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":26,\\"column\\":8},\\"end\\":{\\"line\\":32,\\"column\\":28}}}),(typeof helper === alias3 ? helper.call(alias1,options) : helper));
+  if (!lookupProperty(helpers,\\"relatedElements\\")) { stack1 = alias4.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
+},\\"5\\":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    };
+
+  return \\"            - Additional info    : \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"additionalInfo\\") || (depth0 != null ? lookupProperty(depth0,\\"additionalInfo\\") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === \\"function\\" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{\\"name\\":\\"additionalInfo\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":24,\\"column\\":35},\\"end\\":{\\"line\\":24,\\"column\\":55}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n\\";
+},\\"7\\":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, options, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    }, buffer = 
+  \\"            - Related element(s) :\\\\n\\";
+  stack1 = ((helper = (helper = lookupProperty(helpers,\\"relatedElements\\") || (depth0 != null ? lookupProperty(depth0,\\"relatedElements\\") : depth0)) != null ? helper : container.hooks.helperMissing),(options={\\"name\\":\\"relatedElements\\",\\"hash\\":{},\\"fn\\":container.program(8, data, 0),\\"inverse\\":container.noop,\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":28,\\"column\\":12},\\"end\\":{\\"line\\":31,\\"column\\":32}}}),(typeof helper === \\"function\\" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),options) : helper));
+  if (!lookupProperty(helpers,\\"relatedElements\\")) { stack1 = container.hooks.blockHelperMissing.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
+},\\"8\\":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=\\"function\\", lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    };
+
+  return \\"                * HTML             : \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"html\\") || (depth0 != null ? lookupProperty(depth0,\\"html\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"html\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":29,\\"column\\":37},\\"end\\":{\\"line\\":29,\\"column\\":47}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n                CSS selector(s)  : \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"target\\") || (depth0 != null ? lookupProperty(depth0,\\"target\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"target\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":30,\\"column\\":35},\\"end\\":{\\"line\\":30,\\"column\\":47}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n\\";
+},\\"compiler\\":[8,\\">= 4.3.0\\"],\\"main\\":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, options, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=\\"function\\", alias4=container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    }, buffer = 
+  alias4(((helper = (helper = lookupProperty(helpers,\\"numElements\\") || (depth0 != null ? lookupProperty(depth0,\\"numElements\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"numElements\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":11,\\"column\\":0},\\"end\\":{\\"line\\":11,\\"column\\":15}}}) : helper)))
+    + \\" HTML elements have accessibility issue(s). \\"
+    + alias4(container.lambda(((stack1 = (depth0 != null ? lookupProperty(depth0,\\"results\\") : depth0)) != null ? lookupProperty(stack1,\\"size\\") : stack1), depth0))
+    + \\" rules failed.\\\\nPage URL       :  \\"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,\\"pageURL\\") || (depth0 != null ? lookupProperty(depth0,\\"pageURL\\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\\"name\\":\\"pageURL\\",\\"hash\\":{},\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":12,\\"column\\":18},\\"end\\":{\\"line\\":12,\\"column\\":31}}}) : helper))) != null ? stack1 : \\"\\")
+    + \\"\\\\n\\\\n\\";
+  stack1 = ((helper = (helper = lookupProperty(helpers,\\"results\\") || (depth0 != null ? lookupProperty(depth0,\\"results\\") : depth0)) != null ? helper : alias2),(options={\\"name\\":\\"results\\",\\"hash\\":{},\\"fn\\":container.program(1, data, 0),\\"inverse\\":container.noop,\\"data\\":data,\\"loc\\":{\\"start\\":{\\"line\\":14,\\"column\\":0},\\"end\\":{\\"line\\":34,\\"column\\":12}}}),(typeof helper === alias3 ? helper.call(alias1,options) : helper));
+  if (!lookupProperty(helpers,\\"results\\")) { stack1 = container.hooks.blockHelperMissing.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer + \\"\\\\nFor more info about automated accessibility testing: https://sfdc.co/a11y-test\\\\nFor tips on fixing accessibility bugs: https://sfdc.co/a11y\\\\nQuestions? Post on Accessibility Team Chatter: https://sfdc.co/a11y-gus\\\\n\\";
+},\\"useData\\":true}"
+`;

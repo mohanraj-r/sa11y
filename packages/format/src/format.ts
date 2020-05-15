@@ -6,12 +6,33 @@
  */
 
 import { Result } from 'axe-core';
+import * as Handlebars from 'handlebars';
+import fs from 'fs';
+import path from 'path';
 
 /**
  * Formatter defines the function signature to format accessibility violations found by axe
  */
 export interface Formatter {
     (violations: Result[]): string;
+}
+
+/**
+ * Read template from filesystem and pre-compile it
+ */
+export async function readTemplate() {
+    // TODO (type):  error TS2304: Cannot find name 'TemplateSpecification'
+    // export async function readTemplate(): Promise<TemplateSpecification> {
+    return new Promise((resolve, reject) => {
+        // TODO (Debug): Loading in compiled template file instead without needing to use 'fs' module doesn't work
+        // TODO (script): Add run script to generate compiled template: "yarn handlebars `pwd`/template.mustache -f `pwd`/template.compiled.js --knownOnly"
+        // return require('./template.compiled.js');
+        // TODO (Refactor): When bundling for browser use https://handlebarsjs.com/installation/integrations.html
+        fs.readFile(path.resolve(__dirname, './template.mustache'), (err, data) => {
+            if (err) reject(err);
+            resolve(Handlebars.precompile(data.toString()));
+        });
+    });
 }
 
 /**
