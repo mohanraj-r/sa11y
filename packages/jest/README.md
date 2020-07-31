@@ -19,6 +19,8 @@ Accessibility matcher for [Jest](https://jestjs.io)
 
 The `toBeAccessible()` API from this library can be used in Jest unit tests to test HTML elements or DOM for accessibility.
 
+![Screenshot showing Jest usage and errors showing up in VSCode](https://github.com/salesforce/sa11y/blob/master/docs/jest.png?raw=true)
+
 ## Install
 
 -   Using yarn: `yarn add -D @sa11y/jest`
