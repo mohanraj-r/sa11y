@@ -1,8 +1,8 @@
 # Salesforce Accessibility Automation Libraries
 
-Salesforce Accessibility Automated Testing Libraries and Tools (@sa11y packages).
+Salesforce Automated Accessibility Testing Libraries and Tools ([@sa11y packages](https://www.npmjs.com/org/sa11y)) based on [axe-core][axe]
 
-[![Build](https://circleci.com/gh/salesforce/sa11y.svg?style=svg&circle-token=0e28763afb8e2d0f1293f08a112e8b5e387b324a)](https://app.circleci.com/pipelines/github/salesforce/sa11y?branch=master)
+[![Build](https://circleci.com/gh/salesforce/sa11y.svg?style=svg)](https://app.circleci.com/pipelines/github/salesforce/sa11y?branch=master)
 
 <!-- Temp disabling code cov badge due to https://github.com/salesforce/sa11y/issues/14
      Re-enable with a code cov service that works with CircleCi -->
@@ -37,7 +37,12 @@ Salesforce Accessibility Automated Testing Libraries and Tools (@sa11y packages)
 
 ## Packages
 
-This repo contains the following packages
+This repo contains packages for automated accessibility testing used by teams in Salesforce. However, they are not specific to Salesforce and can be used to test any UI [supported by axe-core](https://github.com/dequelabs/axe-core#supported-browsers) for accessibility.
+
+![Embroidery that says "Don't talk to me until I've had coffee and you've run axe" in a hoop](https://github.com/salesforce/sa11y/blob/master/docs/axe.jpeg?raw=true)
+<!-- cSpell:disable -->
+(Image courtesy: [@shleewhite](https://github.com/shleewhite), [@jorycunningham](https://github.com/jorycunningham))
+<!-- cSpell:enable -->
 
 ### [Jest integration](./packages/jest/README.md)
 
@@ -45,7 +50,9 @@ This repo contains the following packages
     -   integrates the [assertAccessible API](./packages/assert/README.md) with the [Jest assertion API](https://jestjs.io/docs/en/using-matchers)
 -   If you are looking to add accessibility testing to your Jest tests use this package
 
-### [WDIO integration](./packages/wdio/README.MD)
+![Screenshot showing Jest usage and errors showing up in VSCode](https://github.com/salesforce/sa11y/blob/master/docs/jest.png?raw=true)
+
+### [WDIO integration](./packages/wdio/README.md)
 
 -   Provides `assertAccessible()`, `assertAccessibleSync()` APIs that can be used with [WebdriverIO](https://webdriver.io/) to check accessibility of web pages rendered in browsers
 
@@ -56,13 +63,13 @@ This repo contains the following packages
 
 ### [a11y results formatter](./packages/format/README.md)
 
--   Formats raw JSON output of a11y issues from axe into an easy to consume format by consolidating and cross-referencing
+-   Formats raw JSON output of a11y issues from [axe] into an easy to consume format by consolidating and cross-referencing
 -   Used by assert Accessible API and Jest a11y matcher
 -   If you are using axe directly and want to format the results from `axe.run` use this package
 
 ### [Preset accessibility rules](./packages/preset-rules/README.md)
 
--   Provides Base, Recommended, Full accessibility preset rules as [axe](https://github.com/dequelabs/axe-core) configuration
+-   Provides Base, Recommended, Full accessibility preset rules as [axe] configuration
 -   The Recommended preset rule is used by default in the Jest a11y matcher and assert Accessible APIs
     -   The APIs can be overridden to use the Base or Full ruleset as necessary
 
@@ -72,10 +79,12 @@ This repo contains the following packages
 
 -   Private package providing test utilities for `@sa11y` packages
 
-#### [Integration Tests](packages/test-integration/README.md)
+#### [Integration Tests](./packages/test-integration/README.md)
 
 -   Private package providing integration tests for `@sa11y` packages
 
-#### [Common](packages/common/README.md)
+#### [Common](./packages/common/README.md)
 
 -   Common utilities, constants, error messages for `@sa11y` packages
+
+[axe]: https://github.com/dequelabs/axe-core
