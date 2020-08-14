@@ -40,6 +40,7 @@ Salesforce Automated Accessibility Testing Libraries and Tools ([@sa11y packages
 This repo contains packages for automated accessibility testing used by teams in Salesforce. However, they are not specific to Salesforce and can be used to test any UI [supported by axe-core](https://github.com/dequelabs/axe-core#supported-browsers) for accessibility.
 
 ![Embroidery that says "Don't talk to me until I've had coffee and you've run axe" in a hoop](https://github.com/salesforce/sa11y/blob/master/docs/axe.jpeg?raw=true)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmohanraj-r%2Fsa11y.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmohanraj-r%2Fsa11y?ref=badge_shield)
 <!-- cSpell:disable -->
 (Image courtesy: [@shleewhite](https://github.com/shleewhite), [@jorycunningham](https://github.com/jorycunningham))
 <!-- cSpell:enable -->
@@ -88,3 +89,7 @@ This repo contains packages for automated accessibility testing used by teams in
 -   Common utilities, constants, error messages for `@sa11y` packages
 
 [axe]: https://github.com/dequelabs/axe-core
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmohanraj-r%2Fsa11y.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmohanraj-r%2Fsa11y?ref=badge_large)
