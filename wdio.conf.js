@@ -148,6 +148,21 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec'],
 
+    autoCompileOpts: {
+        autoCompile: true,
+        // see https://github.com/TypeStrong/ts-node#cli-and-programmatic-options
+        // for all available options
+        tsNodeOpts: {
+            transpileOnly: true,
+            project: 'tsconfig.json',
+        },
+        // tsconfig-paths is only used if "tsConfigPathsOpts" are provided, if you
+        // do please make sure "tsconfig-paths" is installed as dependency
+        tsConfigPathsOpts: {
+            baseUrl: './',
+        },
+    },
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

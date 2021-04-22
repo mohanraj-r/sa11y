@@ -1,10 +1,10 @@
 {
-    "extends": "../../tsconfig.common.json",
+    "extends": "../../tsconfig.wdio.json",
     "compilerOptions": {
         "rootDir": "src",
         "outDir": "dist"
     },
     "include": ["src"],
-    // "@sa11y/common" is the base package and should not depend on any 
+    // "@sa11y/common" is the base package and should not depend on any
     //  other sa11y packages to prevent cyclic dependency
 }

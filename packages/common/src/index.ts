@@ -6,5 +6,5 @@
  */
 
 export { A11yConfig, AxeResults, axeRuntimeExceptionMsgPrefix, axeVersion, getViolations } from './axe';
-export { WdioAssertFunction, WdioOptions, WdioBrowser } from './wdio';
+export { WdioAssertFunction, WdioOptions } from './wdio';
 export { errMsgHeader, ExceptionList } from './format';

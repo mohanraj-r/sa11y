@@ -8,14 +8,16 @@
 import * as axe from 'axe-core';
 import { recommended } from '@sa11y/preset-rules';
 import { A11yError, exceptionListFilter } from '@sa11y/format';
-import { A11yConfig, AxeResults, axeVersion, getViolations, WdioOptions, WdioBrowser } from '@sa11y/common';
+import { A11yConfig, AxeResults, axeVersion, getViolations, WdioOptions } from '@sa11y/common';
 
 /**
  * Merge given options with default options
  */
 function setDefaultOptions(opts: Partial<WdioOptions> = {}): WdioOptions {
     const defaultOptions: WdioOptions = {
-        driver: global.browser, // Need to be defined inside a function as it is populated at runtime
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        driver: global.browser as WebdriverIO.Browser, // Need to be defined inside a function as it is populated at runtime
         scope: undefined,
         rules: recommended,
         exceptionList: {},
@@ -26,7 +28,7 @@ function setDefaultOptions(opts: Partial<WdioOptions> = {}): WdioOptions {
 /**
  * Return version of axe injected into browser
  */
-export async function getAxeVersion(driver: WdioBrowser): Promise<typeof axeVersion> {
+export async function getAxeVersion(driver: WebdriverIO.Browser): Promise<typeof axeVersion> {
     return driver.execute(() => {
         return typeof axe === 'object' ? axe.version : undefined;
     });
@@ -35,7 +37,7 @@ export async function getAxeVersion(driver: WdioBrowser): Promise<typeof axeVers
 /**
  * Load axe source into browser if it is not already loaded and return version of axe
  */
-export async function loadAxe(driver: WdioBrowser): Promise<void> {
+export async function loadAxe(driver: WebdriverIO.Browser): Promise<void> {
     if ((await getAxeVersion(driver)) !== axeVersion) {
         await driver.execute(axe.source);
     }
@@ -50,7 +52,7 @@ export async function loadAxe(driver: WdioBrowser): Promise<void> {
  */
 export async function runAxe(options: Partial<WdioOptions> = {}): Promise<AxeResults> {
     const { driver, scope, rules } = setDefaultOptions(options);
-    const elemSelector = scope ? (await scope).selector : undefined;
+    const elemSelector = scope ? (await scope).selector : '';
     await loadAxe(driver);
 
     // run axe inside browser and return violations
@@ -69,6 +71,8 @@ export async function runAxe(options: Partial<WdioOptions> = {}): Promise<AxeRes
                 }
             );
         },
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         elemSelector,
         rules
     )) as AxeResults;

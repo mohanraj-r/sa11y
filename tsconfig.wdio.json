@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.common.json",
+  "compilerOptions": {
+      "skipLibCheck": true,
+      "types": ["node", "webdriverio", "webdriverio/sync","webdriverio/async", "@wdio/mocha-framework", "expect-webdriverio"]
+  }
+}

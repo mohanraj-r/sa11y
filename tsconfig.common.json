@@ -12,7 +12,9 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "types": ["node", "jest"]
     },
     "exclude": ["**/dist", "**/__tests__"]
 }
